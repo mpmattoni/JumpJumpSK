@@ -24,6 +24,7 @@
 		29E648B0190A03D000ABBAF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E6488B190A03D000ABBAF1 /* UIKit.framework */; };
 		29E648B8190A03D000ABBAF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E648B6190A03D000ABBAF1 /* InfoPlist.strings */; };
 		29E648BA190A03D000ABBAF1 /* JumpJumpSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */; };
+		29F7043A190A05CD009EEE16 /* Jumpy Frog Art.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 29F70439190A05CD009EEE16 /* Jumpy Frog Art.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		29E648B5190A03D000ABBAF1 /* JumpJumpSKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumpJumpSKTests-Info.plist"; sourceTree = "<group>"; };
 		29E648B7190A03D000ABBAF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpJumpSKTests.m; sourceTree = "<group>"; };
+		29F70439190A05CD009EEE16 /* Jumpy Frog Art.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "Jumpy Frog Art.atlas"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		29E6488F190A03D000ABBAF1 /* JumpJumpSK */ = {
 			isa = PBXGroup;
 			children = (
+				29F70439190A05CD009EEE16 /* Jumpy Frog Art.atlas */,
 				29E64898190A03D000ABBAF1 /* AppDelegate.h */,
 				29E64899190A03D000ABBAF1 /* AppDelegate.m */,
 				29E6489B190A03D000ABBAF1 /* Main.storyboard */,
@@ -244,6 +247,7 @@
 				29E648A7190A03D000ABBAF1 /* Images.xcassets in Resources */,
 				29E648A5190A03D000ABBAF1 /* Spaceship.png in Resources */,
 				29E6489D190A03D000ABBAF1 /* Main.storyboard in Resources */,
+				29F7043A190A05CD009EEE16 /* Jumpy Frog Art.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +476,7 @@
 				29E648BF190A03D000ABBAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29E648C0190A03D000ABBAF1 /* Build configuration list for PBXNativeTarget "JumpJumpSKTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +485,7 @@
 				29E648C2190A03D000ABBAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
