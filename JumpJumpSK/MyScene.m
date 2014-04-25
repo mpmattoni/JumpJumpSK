@@ -8,22 +8,42 @@
 
 #import "MyScene.h"
 
-@implementation MyScene
+@implementation MyScene{
+    
+    
+    SKSpriteNode *myFrog;
+    NSArray *myFrogAnimation;
+    SKAction *myFrogAction;
+    
+    
+}
+
+
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        SKSpriteNode *myBackground = [SKSpriteNode spriteNodeWithImageNamed:@"jungle-dawn1"];
+        myBackground.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        myBackground.name = @"Background";
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+        myFrog = [SKSpriteNode spriteNodeWithImageNamed:@"frog"];
+        myFrog.position = CGPointMake(25, 25);
+
         
-        [self addChild:myLabel];
+        myFrogAnimation = @[[SKTexture textureWithImageNamed:@"frogleft"], [SKTexture textureWithImageNamed:@"frogright"], [SKTexture textureWithImageNamed:@"frogsmile"]];
+        
+        myFrogAction = [SKAction animateWithTextures:myFrogAnimation timePerFrame:1.0];
+                [self addChild:myBackground];
+        
+    
+        
+        [myFrog runAction:[SKAction repeatActionForever:myFrogAction]];
+        [myBackground addChild:myFrog];
+        
+        
     }
     return self;
 }
@@ -48,6 +68,9 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    
+
+    
 }
 
 @end
