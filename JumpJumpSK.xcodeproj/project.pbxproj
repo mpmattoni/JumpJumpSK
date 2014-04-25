@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29E64888190A03D000ABBAF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64887190A03D000ABBAF1 /* Foundation.framework */; };
+		29E6488A190A03D000ABBAF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64889190A03D000ABBAF1 /* CoreGraphics.framework */; };
+		29E6488C190A03D000ABBAF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E6488B190A03D000ABBAF1 /* UIKit.framework */; };
+		29E6488E190A03D000ABBAF1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E6488D190A03D000ABBAF1 /* SpriteKit.framework */; };
+		29E64894190A03D000ABBAF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E64892190A03D000ABBAF1 /* InfoPlist.strings */; };
+		29E64896190A03D000ABBAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E64895190A03D000ABBAF1 /* main.m */; };
+		29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E64899190A03D000ABBAF1 /* AppDelegate.m */; };
+		29E6489D190A03D000ABBAF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E6489B190A03D000ABBAF1 /* Main.storyboard */; };
+		29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E6489F190A03D000ABBAF1 /* ViewController.m */; };
+		29E648A3190A03D000ABBAF1 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E648A2190A03D000ABBAF1 /* MyScene.m */; };
+		29E648A5190A03D000ABBAF1 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E648A4190A03D000ABBAF1 /* Spaceship.png */; };
+		29E648A7190A03D000ABBAF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E648A6190A03D000ABBAF1 /* Images.xcassets */; };
+		29E648AE190A03D000ABBAF1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E648AD190A03D000ABBAF1 /* XCTest.framework */; };
+		29E648AF190A03D000ABBAF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64887190A03D000ABBAF1 /* Foundation.framework */; };
+		29E648B0190A03D000ABBAF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E6488B190A03D000ABBAF1 /* UIKit.framework */; };
+		29E648B8190A03D000ABBAF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E648B6190A03D000ABBAF1 /* InfoPlist.strings */; };
+		29E648BA190A03D000ABBAF1 /* JumpJumpSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29E648B1190A03D000ABBAF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29E6487C190A03D000ABBAF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29E64883190A03D000ABBAF1;
+			remoteInfo = JumpJumpSK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29E64884190A03D000ABBAF1 /* JumpJumpSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumpJumpSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29E64887190A03D000ABBAF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		29E64889190A03D000ABBAF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29E6488B190A03D000ABBAF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		29E6488D190A03D000ABBAF1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		29E64891190A03D000ABBAF1 /* JumpJumpSK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumpJumpSK-Info.plist"; sourceTree = "<group>"; };
+		29E64893190A03D000ABBAF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29E64895190A03D000ABBAF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29E64897190A03D000ABBAF1 /* JumpJumpSK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JumpJumpSK-Prefix.pch"; sourceTree = "<group>"; };
+		29E64898190A03D000ABBAF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		29E64899190A03D000ABBAF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		29E6489C190A03D000ABBAF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29E6489E190A03D000ABBAF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		29E6489F190A03D000ABBAF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		29E648A1190A03D000ABBAF1 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		29E648A2190A03D000ABBAF1 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		29E648A4190A03D000ABBAF1 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		29E648A6190A03D000ABBAF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		29E648AC190A03D000ABBAF1 /* JumpJumpSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumpJumpSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29E648AD190A03D000ABBAF1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		29E648B5190A03D000ABBAF1 /* JumpJumpSKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumpJumpSKTests-Info.plist"; sourceTree = "<group>"; };
+		29E648B7190A03D000ABBAF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpJumpSKTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29E64881190A03D000ABBAF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E6488A190A03D000ABBAF1 /* CoreGraphics.framework in Frameworks */,
+				29E6488C190A03D000ABBAF1 /* UIKit.framework in Frameworks */,
+				29E6488E190A03D000ABBAF1 /* SpriteKit.framework in Frameworks */,
+				29E64888190A03D000ABBAF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29E648A9190A03D000ABBAF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E648AE190A03D000ABBAF1 /* XCTest.framework in Frameworks */,
+				29E648B0190A03D000ABBAF1 /* UIKit.framework in Frameworks */,
+				29E648AF190A03D000ABBAF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29E6487B190A03D000ABBAF1 = {
+			isa = PBXGroup;
+			children = (
+				29E6488F190A03D000ABBAF1 /* JumpJumpSK */,
+				29E648B3190A03D000ABBAF1 /* JumpJumpSKTests */,
+				29E64886190A03D000ABBAF1 /* Frameworks */,
+				29E64885190A03D000ABBAF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29E64885190A03D000ABBAF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29E64884190A03D000ABBAF1 /* JumpJumpSK.app */,
+				29E648AC190A03D000ABBAF1 /* JumpJumpSKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29E64886190A03D000ABBAF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29E64887190A03D000ABBAF1 /* Foundation.framework */,
+				29E64889190A03D000ABBAF1 /* CoreGraphics.framework */,
+				29E6488B190A03D000ABBAF1 /* UIKit.framework */,
+				29E6488D190A03D000ABBAF1 /* SpriteKit.framework */,
+				29E648AD190A03D000ABBAF1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29E6488F190A03D000ABBAF1 /* JumpJumpSK */ = {
+			isa = PBXGroup;
+			children = (
+				29E64898190A03D000ABBAF1 /* AppDelegate.h */,
+				29E64899190A03D000ABBAF1 /* AppDelegate.m */,
+				29E6489B190A03D000ABBAF1 /* Main.storyboard */,
+				29E6489E190A03D000ABBAF1 /* ViewController.h */,
+				29E6489F190A03D000ABBAF1 /* ViewController.m */,
+				29E648A1190A03D000ABBAF1 /* MyScene.h */,
+				29E648A2190A03D000ABBAF1 /* MyScene.m */,
+				29E648A4190A03D000ABBAF1 /* Spaceship.png */,
+				29E648A6190A03D000ABBAF1 /* Images.xcassets */,
+				29E64890190A03D000ABBAF1 /* Supporting Files */,
+			);
+			path = JumpJumpSK;
+			sourceTree = "<group>";
+		};
+		29E64890190A03D000ABBAF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29E64891190A03D000ABBAF1 /* JumpJumpSK-Info.plist */,
+				29E64892190A03D000ABBAF1 /* InfoPlist.strings */,
+				29E64895190A03D000ABBAF1 /* main.m */,
+				29E64897190A03D000ABBAF1 /* JumpJumpSK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29E648B3190A03D000ABBAF1 /* JumpJumpSKTests */ = {
+			isa = PBXGroup;
+			children = (
+				29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */,
+				29E648B4190A03D000ABBAF1 /* Supporting Files */,
+			);
+			path = JumpJumpSKTests;
+			sourceTree = "<group>";
+		};
+		29E648B4190A03D000ABBAF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				29E648B5190A03D000ABBAF1 /* JumpJumpSKTests-Info.plist */,
+				29E648B6190A03D000ABBAF1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29E64883190A03D000ABBAF1 /* JumpJumpSK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29E648BD190A03D000ABBAF1 /* Build configuration list for PBXNativeTarget "JumpJumpSK" */;
+			buildPhases = (
+				29E64880190A03D000ABBAF1 /* Sources */,
+				29E64881190A03D000ABBAF1 /* Frameworks */,
+				29E64882190A03D000ABBAF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JumpJumpSK;
+			productName = JumpJumpSK;
+			productReference = 29E64884190A03D000ABBAF1 /* JumpJumpSK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29E648AB190A03D000ABBAF1 /* JumpJumpSKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29E648C0190A03D000ABBAF1 /* Build configuration list for PBXNativeTarget "JumpJumpSKTests" */;
+			buildPhases = (
+				29E648A8190A03D000ABBAF1 /* Sources */,
+				29E648A9190A03D000ABBAF1 /* Frameworks */,
+				29E648AA190A03D000ABBAF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29E648B2190A03D000ABBAF1 /* PBXTargetDependency */,
+			);
+			name = JumpJumpSKTests;
+			productName = JumpJumpSKTests;
+			productReference = 29E648AC190A03D000ABBAF1 /* JumpJumpSKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29E6487C190A03D000ABBAF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "DaoSoft, LLC";
+				TargetAttributes = {
+					29E648AB190A03D000ABBAF1 = {
+						TestTargetID = 29E64883190A03D000ABBAF1;
+					};
+				};
+			};
+			buildConfigurationList = 29E6487F190A03D000ABBAF1 /* Build configuration list for PBXProject "JumpJumpSK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29E6487B190A03D000ABBAF1;
+			productRefGroup = 29E64885190A03D000ABBAF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29E64883190A03D000ABBAF1 /* JumpJumpSK */,
+				29E648AB190A03D000ABBAF1 /* JumpJumpSKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29E64882190A03D000ABBAF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E64894190A03D000ABBAF1 /* InfoPlist.strings in Resources */,
+				29E648A7190A03D000ABBAF1 /* Images.xcassets in Resources */,
+				29E648A5190A03D000ABBAF1 /* Spaceship.png in Resources */,
+				29E6489D190A03D000ABBAF1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29E648AA190A03D000ABBAF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E648B8190A03D000ABBAF1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29E64880190A03D000ABBAF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E648A3190A03D000ABBAF1 /* MyScene.m in Sources */,
+				29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */,
+				29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */,
+				29E64896190A03D000ABBAF1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29E648A8190A03D000ABBAF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E648BA190A03D000ABBAF1 /* JumpJumpSKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29E648B2190A03D000ABBAF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29E64883190A03D000ABBAF1 /* JumpJumpSK */;
+			targetProxy = 29E648B1190A03D000ABBAF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29E64892190A03D000ABBAF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29E64893190A03D000ABBAF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29E6489B190A03D000ABBAF1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29E6489C190A03D000ABBAF1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29E648B6190A03D000ABBAF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29E648B7190A03D000ABBAF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29E648BB190A03D000ABBAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		29E648BC190A03D000ABBAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29E648BE190A03D000ABBAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JumpJumpSK/JumpJumpSK-Prefix.pch";
+				INFOPLIST_FILE = "JumpJumpSK/JumpJumpSK-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		29E648BF190A03D000ABBAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JumpJumpSK/JumpJumpSK-Prefix.pch";
+				INFOPLIST_FILE = "JumpJumpSK/JumpJumpSK-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		29E648C1190A03D000ABBAF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JumpJumpSK.app/JumpJumpSK";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JumpJumpSK/JumpJumpSK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JumpJumpSKTests/JumpJumpSKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		29E648C2190A03D000ABBAF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JumpJumpSK.app/JumpJumpSK";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JumpJumpSK/JumpJumpSK-Prefix.pch";
+				INFOPLIST_FILE = "JumpJumpSKTests/JumpJumpSKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29E6487F190A03D000ABBAF1 /* Build configuration list for PBXProject "JumpJumpSK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29E648BB190A03D000ABBAF1 /* Debug */,
+				29E648BC190A03D000ABBAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29E648BD190A03D000ABBAF1 /* Build configuration list for PBXNativeTarget "JumpJumpSK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29E648BE190A03D000ABBAF1 /* Debug */,
+				29E648BF190A03D000ABBAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		29E648C0190A03D000ABBAF1 /* Build configuration list for PBXNativeTarget "JumpJumpSKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29E648C1190A03D000ABBAF1 /* Debug */,
+				29E648C2190A03D000ABBAF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29E6487C190A03D000ABBAF1 /* Project object */;
+}
