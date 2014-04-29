@@ -14,3 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+#define DaosoftLog if(0); else NSLog // logging on
+//#define DaosoftLog if(1); else NSLog // logging off

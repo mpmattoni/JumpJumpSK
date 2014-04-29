@@ -24,13 +24,14 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        SKSpriteNode *myBackground = [SKSpriteNode spriteNodeWithImageNamed:@"jungle-dawn1"];
+        SKSpriteNode *myBackground = [SKSpriteNode spriteNodeWithImageNamed:@"jungle_background_640x960"];
         myBackground.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         myBackground.name = @"Background";
         
         
+        
         myFrog = [SKSpriteNode spriteNodeWithImageNamed:@"frog"];
-        myFrog.position = CGPointMake(25, 25);
+        myFrog.position = CGPointMake(50,50);
 
         
         myFrogAnimation = @[[SKTexture textureWithImageNamed:@"frogleft"], [SKTexture textureWithImageNamed:@"frogright"], [SKTexture textureWithImageNamed:@"frogsmile"]];

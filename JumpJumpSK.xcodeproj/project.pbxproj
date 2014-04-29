@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295FD059190F30C70052769F /* JumpJUmpSK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 295FD058190F30C70052769F /* JumpJUmpSK.atlas */; };
 		29E64888190A03D000ABBAF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64887190A03D000ABBAF1 /* Foundation.framework */; };
 		29E6488A190A03D000ABBAF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64889190A03D000ABBAF1 /* CoreGraphics.framework */; };
 		29E6488C190A03D000ABBAF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E6488B190A03D000ABBAF1 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		295FD058190F30C70052769F /* JumpJUmpSK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = JumpJUmpSK.atlas; sourceTree = "<group>"; };
 		29E64884190A03D000ABBAF1 /* JumpJumpSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumpJumpSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E64887190A03D000ABBAF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29E64889190A03D000ABBAF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +125,7 @@
 		29E6488F190A03D000ABBAF1 /* JumpJumpSK */ = {
 			isa = PBXGroup;
 			children = (
+				295FD058190F30C70052769F /* JumpJUmpSK.atlas */,
 				29F70439190A05CD009EEE16 /* Jumpy Frog Art.atlas */,
 				29E64898190A03D000ABBAF1 /* AppDelegate.h */,
 				29E64899190A03D000ABBAF1 /* AppDelegate.m */,
@@ -246,6 +249,7 @@
 				29E64894190A03D000ABBAF1 /* InfoPlist.strings in Resources */,
 				29E648A7190A03D000ABBAF1 /* Images.xcassets in Resources */,
 				29E648A5190A03D000ABBAF1 /* Spaceship.png in Resources */,
+				295FD059190F30C70052769F /* JumpJUmpSK.atlas in Resources */,
 				29E6489D190A03D000ABBAF1 /* Main.storyboard in Resources */,
 				29F7043A190A05CD009EEE16 /* Jumpy Frog Art.atlas in Resources */,
 			);

@@ -15,22 +15,32 @@
 {
     [super viewDidLoad];
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    
-    // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate
 {
     return YES;
+}
+
+- (void)viewWillLayoutSubviews
+{
+    //Present the scene here.  If presented in viewDidLoad then the view hasn't been added to the
+    //heirarchy yet and will give you incorrect coordinates in landscape view.
+    [super viewWillLayoutSubviews];
+    
+    // Configure the view.
+    SKView * skView = (SKView *)self.view;
+    if (!skView.scene) {
+        skView.showsFPS = YES;
+        skView.showsNodeCount = YES;
+        
+        // Create and configure the scene.
+        SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
+        scene.scaleMode = SKSceneScaleModeAspectFill;
+        
+        // Present the scene.
+        [skView presentScene:scene];
+    }
 }
 
 - (NSUInteger)supportedInterfaceOrientations
