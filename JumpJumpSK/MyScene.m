@@ -19,7 +19,6 @@
 }
 
 
-
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -27,11 +26,15 @@
         SKSpriteNode *myBackground = [SKSpriteNode spriteNodeWithImageNamed:@"jungle_background_640x960"];
         myBackground.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
         myBackground.name = @"Background";
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+
         
         
         
         myFrog = [SKSpriteNode spriteNodeWithImageNamed:@"frog"];
-        myFrog.position = CGPointMake(50,50);
+        myFrog.position = CGPointMake(0,0);
+        myFrog.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:50];
+
 
         
         myFrogAnimation = @[[SKTexture textureWithImageNamed:@"frogleft"], [SKTexture textureWithImageNamed:@"frogright"], [SKTexture textureWithImageNamed:@"frogsmile"]];
@@ -49,22 +52,15 @@
     return self;
 }
 
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
+        
+        SKAction *frogJump = [SKAction moveToY:myFrog.position.y+50 duration:0.1];
+        [myFrog runAction:frogJump];
+        
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
