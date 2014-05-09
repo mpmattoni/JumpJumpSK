@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		295FD059190F30C70052769F /* JumpJUmpSK.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 295FD058190F30C70052769F /* JumpJUmpSK.atlas */; };
+		297266CE191C79A200615981 /* Fly.m in Sources */ = {isa = PBXBuildFile; fileRef = 297266CD191C79A200615981 /* Fly.m */; };
 		29E64888190A03D000ABBAF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64887190A03D000ABBAF1 /* Foundation.framework */; };
 		29E6488A190A03D000ABBAF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64889190A03D000ABBAF1 /* CoreGraphics.framework */; };
 		29E6488C190A03D000ABBAF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E6488B190A03D000ABBAF1 /* UIKit.framework */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		295FD058190F30C70052769F /* JumpJUmpSK.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = JumpJUmpSK.atlas; sourceTree = "<group>"; };
+		297266CC191C79A200615981 /* Fly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fly.h; sourceTree = "<group>"; };
+		297266CD191C79A200615981 /* Fly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fly.m; sourceTree = "<group>"; };
 		29E64884190A03D000ABBAF1 /* JumpJumpSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumpJumpSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E64887190A03D000ABBAF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		29E64889190A03D000ABBAF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +149,8 @@
 				29E648A4190A03D000ABBAF1 /* Spaceship.png */,
 				29E648A6190A03D000ABBAF1 /* Images.xcassets */,
 				29E64890190A03D000ABBAF1 /* Supporting Files */,
+				297266CC191C79A200615981 /* Fly.h */,
+				297266CD191C79A200615981 /* Fly.m */,
 				377F5144191C6F95001AFD57 /* Frog.h */,
 				377F5145191C6F95001AFD57 /* Frog.m */,
 				377F5147191C726A001AFD57 /* RedSnake.h */,
@@ -288,6 +293,7 @@
 				377F5146191C6F95001AFD57 /* Frog.m in Sources */,
 				29E648A3190A03D000ABBAF1 /* MyScene.m in Sources */,
 				377F5149191C726A001AFD57 /* RedSnake.m in Sources */,
+				297266CE191C79A200615981 /* Fly.m in Sources */,
 				29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */,
 				29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */,
 				377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */,

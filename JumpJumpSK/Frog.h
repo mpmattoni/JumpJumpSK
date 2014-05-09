@@ -12,6 +12,7 @@
 
 + (Frog *) getInstance;
 
-- (void) animate;
+- (void) lookAround;
+- (void) jump;
 
 @end

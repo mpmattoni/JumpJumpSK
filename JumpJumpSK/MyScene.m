@@ -10,6 +10,7 @@
 #import "Frog.h"
 #import "RedSnake.h"
 #import "GreenSnake.h"
+#import "Fly.h"
 
 #define Z_ORDER_FOREGROUND 100
 #define Z_ORDER_BACKGROUND -100
@@ -20,6 +21,7 @@
 @interface MyScene ()
 {}
 @property (nonatomic,strong) Frog *myFrog;
+@property (nonatomic,strong) Fly *myFly;
 @property (nonatomic,strong) RedSnake *redSnake;
 @property (nonatomic,strong) GreenSnake *greenSnake;
 @end
@@ -43,9 +45,11 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-//        SKAction *frogJump = [SKAction moveToY:frog.position.y+50 duration:0.1];
-//        [frog runAction:frogJump];
-//        
+    NSLog(@"Hey");
+    [self.myFrog jump];
+    //[self.myFrog lookAround];
+
+    
     
 }
 
@@ -62,16 +66,17 @@
 }
 
 -(void)createPhysicsWorld{
-    //self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-    //self.physicsWorld.gravity = CGVectorMake(0, -9.8);
-    //myFrog.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:50];
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+    
+    self.physicsWorld.gravity = CGVectorMake(0, -9.8);
+
     //mySnake.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:100];
 }
 
 -(void)addAllSprites{
     //frog
     self.myFrog = [Frog getInstance];
-    [self.myFrog animate];
+    [self.myFrog lookAround];
     self.myFrog.position = CGPointMake(0,-125);
     self.myFrog.zPosition = Z_ORDER_FOREGROUND;
     [myBackground addChild:self.myFrog];
@@ -89,5 +94,12 @@
     self.redSnake.position = CGPointMake(-400,-100);
     self.redSnake.zPosition = Z_ORDER_BACK;
     [myBackground addChild:self.redSnake];
+    
+    //fly
+    self.myFly = [Fly getInstance];
+    [self.myFly animate];
+    self.myFly.position = CGPointMake(0,-125);
+    self.myFly.zPosition = Z_ORDER_FOREGROUND+1;
+    [myBackground addChild:self.myFly];
 }
 @end
