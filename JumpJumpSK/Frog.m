@@ -25,19 +25,27 @@
 }
 
 - (void) lookAround {
-    [self removeAllActions];
-    NSArray *frogAnimation = @[[SKTexture textureWithImageNamed:@"frogleft"], [SKTexture textureWithImageNamed:@"frogright"], [SKTexture textureWithImageNamed:@"frogsmile"]];
-    SKAction *frogAction = [SKAction animateWithTextures:frogAnimation timePerFrame:1.0];
-    [self runAction:[SKAction repeatActionForever:frogAction]];
+   [self removeAllActions];
+    [self runAction:[SKAction repeatActionForever:[self getLookAroundAction]]];
 }
 
 - (void) jump {
-    [self removeAllActions];
-    NSArray *frogAnimation = @[[SKTexture textureWithImageNamed:@"frogrest"], [SKTexture textureWithImageNamed:@"frog-model2"], [SKTexture textureWithImageNamed:@"frog-model"]];
+   [self removeAllActions];
+    [self runAction:[self getJumpUpAction] completion:^{
+        [self lookAround];
+    }];
+}
+
+- (SKAction *) getLookAroundAction {
+    NSArray *frogAnimation = @[[SKTexture textureWithImageNamed:@"frogleft"], [SKTexture textureWithImageNamed:@"frogright"], [SKTexture textureWithImageNamed:@"frogsmile"]];
+    return [SKAction animateWithTextures:frogAnimation timePerFrame:1.0];
+}
+
+- (SKAction *) getJumpUpAction {
+    NSArray *frogAnimation = @[[SKTexture textureWithImageNamed:@"frog-model"], [SKTexture textureWithImageNamed:@"frog-model2"]];
     SKAction *frogAction = [SKAction animateWithTextures:frogAnimation timePerFrame:0.1];
     SKAction *frogMoveUp = [SKAction moveByX:0 y:300 duration:0.5];
-    SKAction *frogJump = [SKAction group:@[frogAction, frogMoveUp]];
-    [self runAction:frogJump];
+    return [SKAction group:@[frogAction, frogMoveUp]];
 }
 
 @end

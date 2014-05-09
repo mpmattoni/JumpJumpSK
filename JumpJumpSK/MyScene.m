@@ -44,13 +44,7 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    
-    NSLog(@"Hey");
     [self.myFrog jump];
-    //[self.myFrog lookAround];
-
-    
-    
 }
 
 -(void)update:(CFTimeInterval)currentTime {
