@@ -24,6 +24,7 @@
 @property (nonatomic,strong) Fly *myFly;
 @property (nonatomic,strong) RedSnake *redSnake;
 @property (nonatomic,strong) GreenSnake *greenSnake;
+
 @end
 
 
@@ -45,7 +46,20 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     [self.myFrog jump];
+    SKShapeNode *yourline = [SKShapeNode node];
+    CGMutablePathRef pathToDraw = CGPathCreateMutable();
+    NSLog(@"Drawing a path from origin: %@ to frame size: %@", NSStringFromCGPoint(self.frame.origin), NSStringFromCGSize(self.frame.size));
+    CGPathMoveToPoint(pathToDraw, NULL, self.frame.origin.x, self.frame.origin.y);
+    CGPathAddLineToPoint(pathToDraw, NULL, self.frame.size.width, self.frame.size.height);
+    yourline.path = pathToDraw;
+    [yourline setStrokeColor:[UIColor redColor]];
+    [self addChild:yourline];
 }
+
+
+
+
+
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
