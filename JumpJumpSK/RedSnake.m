@@ -24,7 +24,6 @@
 }
 
 - (void) animate {
-    
     //redsnake
     NSArray *redSnakeAnimationFramesRight = @[[SKTexture textureWithImageNamed:@"redsnake-right-1"],
                                      [SKTexture textureWithImageNamed:@"redsnake-right-2"],

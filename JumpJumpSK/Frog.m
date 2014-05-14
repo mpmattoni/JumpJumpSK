@@ -7,6 +7,7 @@
 //
 
 #import "Frog.h"
+#import "Constants.h"
 
 #define FROG_IMAGE @"frog"
 
@@ -19,7 +20,10 @@
 - (id) initWithImageNamed:(NSString *)name
 {
     if (self = [super initWithImageNamed:name]){
-        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height];
+        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+        self.physicsBody.categoryBitMask = FrogCollider;
+        self.physicsBody.collisionBitMask = FlyCollider;
+
     }
     return self;
 }

@@ -12,6 +12,7 @@
 
 + (Fly *) getInstance;
 
-- (void) animate;
+- (void) flyAcrossScreen;
+-(CGMutablePathRef)pathAcrossScreen;
 
 @end
