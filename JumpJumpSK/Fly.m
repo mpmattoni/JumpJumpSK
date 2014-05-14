@@ -21,13 +21,17 @@
 - (id) initWithImageNamed:(NSString *)name
 {
     if (self = [super initWithImageNamed:name]){
-        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
-        self.physicsBody.affectedByGravity = NO;
-        self.physicsBody.mass = 0;
-        self.physicsBody.categoryBitMask = FlyCollider;
-        self.physicsBody.collisionBitMask = FrogCollider;
+        [self setupPhysics];
     }
     return self;
+}
+
+- (void) setupPhysics {
+    self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+    self.physicsBody.affectedByGravity = NO;
+    self.physicsBody.mass = 0;
+    self.physicsBody.categoryBitMask = FlyCollider;
+    self.physicsBody.contactTestBitMask = FrogCollider;
 }
 
 - (void) flyAcrossScreen {

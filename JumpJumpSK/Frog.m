@@ -20,12 +20,16 @@
 - (id) initWithImageNamed:(NSString *)name
 {
     if (self = [super initWithImageNamed:name]){
-        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
-        self.physicsBody.categoryBitMask = FrogCollider;
-        self.physicsBody.collisionBitMask = FlyCollider;
-
+        [self setupPhysics];
     }
     return self;
+}
+
+- (void) setupPhysics {
+    self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+    self.physicsBody.categoryBitMask = FrogCollider;
+    self.physicsBody.contactTestBitMask = FlyCollider;
+    
 }
 
 - (void) lookAround {

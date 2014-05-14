@@ -11,6 +11,7 @@
 #import "RedSnake.h"
 #import "GreenSnake.h"
 #import "Fly.h"
+#import "Constants.h"
 
 #define Z_ORDER_FOREGROUND 100
 #define Z_ORDER_BACKGROUND -100
@@ -20,7 +21,7 @@
 
 
 
-@interface MyScene ()
+@interface MyScene () <SKPhysicsContactDelegate>
 {}
 @property (nonatomic,strong) Frog *myFrog;
 @property (nonatomic,strong) Fly *myFly;
@@ -65,10 +66,8 @@
 -(void)createPhysicsWorld{
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
     self.physicsWorld.gravity = CGVectorMake(0, -9.8);
-
-   }
-
-
+    self.physicsWorld.contactDelegate = self;
+}
 
 -(void)addAllSprites{
     //frog
@@ -104,4 +103,13 @@
     [myLine setStrokeColor:[UIColor yellowColor]];
     [self addChild:myLine];
 }
+
+- (void) didBeginContact:(SKPhysicsContact *)contact
+{
+    uint32_t collision = FlyCollider | FrogCollider;
+    if (collision) {
+        NSLog(@"BOOOMMMM");
+    }
+}
+
 @end
