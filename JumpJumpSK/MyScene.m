@@ -106,7 +106,7 @@
 
 - (void) didBeginContact:(SKPhysicsContact *)contact
 {
-    uint32_t collision = FlyCollider | FrogCollider;
+    uint32_t collision = FlyCollider;
     if (collision) {
         NSLog(@"BOOOMMMM");
     }

@@ -30,6 +30,7 @@
     self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.mass = 0;
+    self.physicsBody.dynamic = NO;
     self.physicsBody.categoryBitMask = FlyCollider;
     self.physicsBody.contactTestBitMask = FrogCollider;
 }

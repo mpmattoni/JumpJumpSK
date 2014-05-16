@@ -28,7 +28,7 @@
 - (void) setupPhysics {
     self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
     self.physicsBody.categoryBitMask = FrogCollider;
-    self.physicsBody.contactTestBitMask = FlyCollider;
+    self.physicsBody.collisionBitMask = FlyCollider;
     
 }
 
