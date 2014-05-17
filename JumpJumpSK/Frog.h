@@ -7,8 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Animal.h"
 
-@interface Frog : SKSpriteNode
+@interface Frog : Animal
 
 + (Frog *) getInstance;
 

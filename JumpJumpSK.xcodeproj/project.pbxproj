@@ -30,6 +30,7 @@
 		377F5146191C6F95001AFD57 /* Frog.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F5145191C6F95001AFD57 /* Frog.m */; };
 		377F5149191C726A001AFD57 /* RedSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F5148191C726A001AFD57 /* RedSnake.m */; };
 		377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F514E191C75F0001AFD57 /* GreenSnake.m */; };
+		37D9EF0219280AEC00F99071 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D9EF0119280AEC00F99071 /* Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		377F5148191C726A001AFD57 /* RedSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedSnake.m; sourceTree = "<group>"; };
 		377F514D191C75F0001AFD57 /* GreenSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenSnake.h; sourceTree = "<group>"; };
 		377F514E191C75F0001AFD57 /* GreenSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenSnake.m; sourceTree = "<group>"; };
+		37D9EF0019280AEC00F99071 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		37D9EF0119280AEC00F99071 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				377F5148191C726A001AFD57 /* RedSnake.m */,
 				377F514D191C75F0001AFD57 /* GreenSnake.h */,
 				377F514E191C75F0001AFD57 /* GreenSnake.m */,
+				37D9EF0019280AEC00F99071 /* Animal.h */,
+				37D9EF0119280AEC00F99071 /* Animal.m */,
 			);
 			path = JumpJumpSK;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				297266CE191C79A200615981 /* Fly.m in Sources */,
 				29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */,
 				29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */,
+				37D9EF0219280AEC00F99071 /* Animal.m in Sources */,
 				377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */,
 				29E64896190A03D000ABBAF1 /* main.m in Sources */,
 			);

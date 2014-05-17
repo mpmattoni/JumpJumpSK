@@ -7,8 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Animal.h"
 
-@interface GreenSnake : SKSpriteNode
+@interface GreenSnake : Animal
 
 + (GreenSnake *) getInstance;
 

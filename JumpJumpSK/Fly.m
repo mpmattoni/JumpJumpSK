@@ -8,26 +8,17 @@
 //
 
 #import "Fly.h"
-#import "Constants.h"
 
 #define FLY_IMAGE @"fly"
 
 @implementation Fly
 
 + (Fly *) getInstance {
-    return [[Fly alloc] initWithImageNamed:FLY_IMAGE];
-}
-
-- (id) initWithImageNamed:(NSString *)name
-{
-    if (self = [super initWithImageNamed:name]){
-        [self setupPhysics];
-    }
-    return self;
+    return [[Fly alloc] initWithImageNamed:FLY_IMAGE andPosition:INITIAL_POSITION_FLY andZPosition:Z_POSITION_FLY];
 }
 
 - (void) setupPhysics {
-    self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+    [super setupPhysics];
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.mass = 0;
     self.physicsBody.dynamic = NO;
@@ -41,7 +32,7 @@
 }
 
 
--(CGMutablePathRef)pathAcrossScreen {
+-(CGMutablePathRef) pathAcrossScreen {
     UIBezierPath *trackPath = [UIBezierPath bezierPath];
     [trackPath moveToPoint:CGPointMake(0,0)];
     

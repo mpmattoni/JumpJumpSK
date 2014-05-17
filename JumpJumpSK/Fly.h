@@ -7,12 +7,13 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Animal.h"
 
-@interface Fly: SKSpriteNode
+@interface Fly: Animal
 
 + (Fly *) getInstance;
 
 - (void) flyAcrossScreen;
--(CGMutablePathRef)pathAcrossScreen;
+- (CGMutablePathRef) pathAcrossScreen;
 
 @end

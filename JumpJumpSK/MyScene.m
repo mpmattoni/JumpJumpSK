@@ -72,12 +72,10 @@
 -(void)addAllSprites{
     //frog
     self.myFrog = [Frog getInstance];
-    [self.myFrog lookAround];
-    self.myFrog.position = CGPointMake(0,0);
-    self.myFrog.zPosition = Z_ORDER_FOREGROUND;
     [myBackground addChild:self.myFrog];
+    [self.myFrog lookAround];
     
-    //snake
+    //greenSnake
     self.greenSnake = [GreenSnake getInstance];
     [self.greenSnake animate];
     self.greenSnake.position = CGPointMake(-200,-100);
@@ -86,17 +84,13 @@
     
     //redSnake
     self.redSnake = [RedSnake getInstance];
-    [self.redSnake animate];
-    self.redSnake.position = CGPointMake(-400,-100);
-    self.redSnake.zPosition = Z_ORDER_BACK;
     [myBackground addChild:self.redSnake];
+    [self.redSnake slitherBackAndForth];
     
     //fly
     self.myFly = [Fly getInstance];
-    [self.myFly flyAcrossScreen];
-    self.myFly.position = CGPointMake(-200,-100);
-    self.myFly.zPosition = Z_ORDER_FOREGROUND+1;
     [myBackground addChild:self.myFly];
+    [self.myFly flyAcrossScreen];
     
     SKShapeNode *myLine = [SKShapeNode node];
     myLine.path = [self.myFly pathAcrossScreen];
