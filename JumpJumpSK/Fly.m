@@ -27,18 +27,18 @@
 }
 
 - (void) flyAcrossScreen {
-    SKAction *followPathAcrossScreen = [SKAction followPath:[self pathAcrossScreen] asOffset:YES orientToPath:NO duration:8.0];
-    [self runAction:followPathAcrossScreen];
+    SKAction *followPathAcrossScreen = [SKAction followPath:[self pathAcrossScreen] asOffset:NO orientToPath:NO duration:10.0];
+    [self runAction:[SKAction repeatActionForever:followPathAcrossScreen]];
 }
 
 
 -(CGMutablePathRef) pathAcrossScreen {
     UIBezierPath *trackPath = [UIBezierPath bezierPath];
     
-    CGPoint startingPoint = [self getPositionForX:2 outOf:5 andY:2 outOf:5 preventClipping:NO];
-    CGPoint endingPoint = [self getPositionForX:7 outOf:5 andY:1 outOf:5 preventClipping:NO];
-    CGPoint intermediate1 = [self getPositionForX:4 outOf:5 andY:4 outOf:5 preventClipping:NO];
-    CGPoint intermediate2 = [self getPositionForX:3 outOf:5 andY:1 outOf:5 preventClipping:NO];
+    CGPoint startingPoint = [self getPositionForXPercent:10 andYPercent:90 preventClipping:NO];
+    CGPoint endingPoint = [self getPositionForXPercent:120 andYPercent:30 preventClipping:NO];
+    CGPoint intermediate1 = [self getPositionForXPercent:60 andYPercent:70 preventClipping:NO];
+    CGPoint intermediate2 = [self getPositionForXPercent:65 andYPercent:20 preventClipping:NO];
     
     [trackPath moveToPoint:startingPoint];
     

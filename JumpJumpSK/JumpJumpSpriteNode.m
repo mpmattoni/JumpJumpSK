@@ -28,19 +28,36 @@
     [self setPositionToX:x outOf:xTotal andY:y outOf:yTotal preventClipping:YES];
 }
 
+- (void) setPositionToXPercent:(int)x andYPercent:(int)y {
+    self.position = [self getPositionForXPercent:x andYPercent:y];
+}
+
+- (void) setPositionToXPercent:(int)x andYPercent:(int)y preventClipping:(BOOL)preventClipping {
+    self.position = [self getPositionForXPercent:x andYPercent:y preventClipping:preventClipping];
+}
+
 
 - (void) setupPhysics {
    self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
 }
 
 - (CGPoint) getPositionForX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal preventClipping:(BOOL)preventClipping {
+    float xRatio = (float)x/xTotal;
+    float yRatio = (float)y/yTotal;
+    return [self getPositionForXPercent:xRatio andYPercent:yRatio];
+}
+
+- (CGPoint) getPositionForX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal {
+    return [self getPositionForX:x outOf:xTotal andY:y outOf:yTotal preventClipping:YES];
+}
+
+- (CGPoint) getPositionForXPercent:(int)x andYPercent:(int)y preventClipping:(BOOL)preventClipping {
+    float xPercent = (float)x/100;
+    float yPercent = (float)y/100;
     int screenWidth = self.scene.size.width;
     int screenHeight = self.scene.size.height;
-    
-    float xRatio = (float)x/xTotal;
-    float xCoor = (xRatio - 0.5) * screenWidth;
-    float yRatio = (float)y/yTotal;
-    float yCoor = (0.5 - yRatio) * screenHeight;
+    float xCoor = (xPercent - 0.5) * screenWidth;
+    float yCoor = (0.5 - yPercent) * screenHeight;
     
     if (preventClipping) {
         int widthBuffer = self.frame.size.width/2;
@@ -61,8 +78,8 @@
     return pointInScene;
 }
 
-- (CGPoint) getPositionForX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal {
-    return [self getPositionForX:x outOf:xTotal andY:y outOf:yTotal preventClipping:YES];
+- (CGPoint) getPositionForXPercent:(int)x andYPercent:(int)y {
+    return [self getPositionForXPercent:x andYPercent:y preventClipping:YES];
 }
 
 @end

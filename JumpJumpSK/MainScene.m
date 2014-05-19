@@ -66,31 +66,31 @@
     //frog
     self.myFrog = [Frog getInstance];
     [myBackground addChild:self.myFrog];
-    [self.myFrog setPositionToX:2 outOf:4 andY:4 outOf:4];
+    [self.myFrog setPositionToXPercent:50 andYPercent:100];
     [self.myFrog lookAround];
     
     //greenSnake
     self.greenSnake = [GreenSnake getInstance];
     [myBackground addChild:self.greenSnake];
-    [self.greenSnake setPositionToX:1 outOf:8 andY:3 outOf:4];
+    [self.greenSnake setPositionToXPercent:10 andYPercent:80];
     [self.greenSnake bobAndHiss];
     
     //redSnake
     self.redSnake = [RedSnake getInstance];
     [myBackground addChild:self.redSnake];
+    [self.redSnake setPositionToXPercent:-20 andYPercent:80 preventClipping:NO];
     [self.redSnake slitherBackAndForth];
-    [self.redSnake setPositionToX:-2 outOf:12 andY:3 outOf:4 preventClipping:NO];
     
     //fly
     self.myFly = [Fly getInstance];
     [myBackground addChild:self.myFly];
     [self.myFly flyAcrossScreen];
-    [self.myFly setPositionToX:1 outOf:4 andY:3 outOf:4 preventClipping:NO];
     
     SKShapeNode *myLine = [SKShapeNode node];
     myLine.path = [self.myFly pathAcrossScreen];
     [myLine setStrokeColor:[UIColor yellowColor]];
     [self addChild:myLine];
+    myLine.position = CGPointMake(250,150);
 }
 
 
