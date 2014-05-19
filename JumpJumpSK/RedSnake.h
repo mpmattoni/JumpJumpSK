@@ -7,9 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "Animal.h"
+#import "JumpJumpSpriteNode.h"
 
-@interface RedSnake : Animal
+@interface RedSnake : JumpJumpSpriteNode
 
 + (RedSnake *) getInstance;
 

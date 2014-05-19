@@ -1,5 +1,5 @@
 //
-//  MyScene.h
+//  MainScene.h
 //  JumpJumpSK
 //
 
@@ -8,6 +8,5 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MyScene : SKScene
-
+@interface MainScene : SKScene
 @end

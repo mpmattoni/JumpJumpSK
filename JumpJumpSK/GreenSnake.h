@@ -7,12 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "Animal.h"
+#import "JumpJumpSpriteNode.h"
 
-@interface GreenSnake : Animal
+@interface GreenSnake : JumpJumpSpriteNode
 
 + (GreenSnake *) getInstance;
 
-- (void) animate;
+- (void) bobAndHiss;
 
 @end

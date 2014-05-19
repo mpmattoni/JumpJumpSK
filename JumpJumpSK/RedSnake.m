@@ -12,7 +12,7 @@
 @implementation RedSnake
 
 + (RedSnake *) getInstance {
-    return [[RedSnake alloc] initWithImageNamed:RED_SNAKE_IMAGE andPosition:INITIAL_POSITION_REDSNAKE andZPosition:Z_POSITION_REDSNAKE];
+    return [[RedSnake alloc] initWithImageNamed:RED_SNAKE_IMAGE andZPosition:Z_POSITION_REDSNAKE];
 }
 
 - (void) setupPhysics {

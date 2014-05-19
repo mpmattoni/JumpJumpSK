@@ -7,9 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "Animal.h"
+#import "JumpJumpSpriteNode.h"
 
-@interface Fly: Animal
+@interface Fly: JumpJumpSpriteNode
 
 + (Fly *) getInstance;
 

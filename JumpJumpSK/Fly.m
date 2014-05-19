@@ -14,7 +14,7 @@
 @implementation Fly
 
 + (Fly *) getInstance {
-    return [[Fly alloc] initWithImageNamed:FLY_IMAGE andPosition:INITIAL_POSITION_FLY andZPosition:Z_POSITION_FLY];
+    return [[Fly alloc] initWithImageNamed:FLY_IMAGE andZPosition:Z_POSITION_FLY];
 }
 
 - (void) setupPhysics {

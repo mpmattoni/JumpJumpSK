@@ -12,18 +12,10 @@
 @implementation GreenSnake
 
 + (GreenSnake *) getInstance {
-    return [[GreenSnake alloc] initWithImageNamed:GREEN_SNAKE_IMAGE];
+    return [[GreenSnake alloc] initWithImageNamed:GREEN_SNAKE_IMAGE andZPosition:Z_POSITION_GREENSNAKE];
 }
 
-- (id) initWithImageNamed:(NSString *)name
-{
-    if (self = [super initWithImageNamed:name]){
-        //do stuff
-    }
-    return self;
-}
-
-- (void) animate {
+- (void) bobAndHiss {
     
     //snake
     NSArray *snakeAnimation = @[[SKTexture textureWithImageNamed:@"snake1"],

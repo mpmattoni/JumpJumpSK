@@ -13,7 +13,7 @@
 @implementation Frog
 
 + (Frog *) getInstance {
-    return [[Frog alloc] initWithImageNamed:FROG_IMAGE andPosition:INITIAL_POSITION_FROG andZPosition:Z_POSITION_FROG];
+    return [[Frog alloc] initWithImageNamed:FROG_IMAGE andZPosition:Z_POSITION_FROG];
 }
 
 - (void) setupPhysics {
