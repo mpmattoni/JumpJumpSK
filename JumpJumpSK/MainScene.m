@@ -85,6 +85,7 @@
     self.myFly = [Fly getInstance];
     [myBackground addChild:self.myFly];
     [self.myFly flyAcrossScreen];
+    [self.myFly setPositionToX:1 outOf:4 andY:3 outOf:4 preventClipping:NO];
     
     SKShapeNode *myLine = [SKShapeNode node];
     myLine.path = [self.myFly pathAcrossScreen];
@@ -109,9 +110,9 @@
 #pragma mark - Physics
 /* ------------------------------------------------------------*/
 -(void)createPhysicsWorld{
-    //    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-    //    self.physicsWorld.gravity = CGVectorMake(0, -9.8);
-    //    self.physicsWorld.contactDelegate = self;
+    self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+    self.physicsWorld.gravity = CGVectorMake(0, -9.8);
+    self.physicsWorld.contactDelegate = self;
 }
 
 - (void) didBeginContact:(SKPhysicsContact *)contact

@@ -30,7 +30,7 @@
 
 
 - (void) setupPhysics {
-   // self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+   self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
 }
 
 - (CGPoint) getPositionForX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal preventClipping:(BOOL)preventClipping {
@@ -61,5 +61,8 @@
     return pointInScene;
 }
 
+- (CGPoint) getPositionForX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal {
+    return [self getPositionForX:x outOf:xTotal andY:y outOf:yTotal preventClipping:YES];
+}
 
 @end

@@ -27,18 +27,24 @@
 }
 
 - (void) flyAcrossScreen {
-    SKAction *followPathAcrossScreen = [SKAction followPath:[self pathAcrossScreen] asOffset:YES orientToPath:NO duration:12.0];
+    SKAction *followPathAcrossScreen = [SKAction followPath:[self pathAcrossScreen] asOffset:YES orientToPath:NO duration:8.0];
     [self runAction:followPathAcrossScreen];
 }
 
 
 -(CGMutablePathRef) pathAcrossScreen {
     UIBezierPath *trackPath = [UIBezierPath bezierPath];
-    [trackPath moveToPoint:CGPointMake(0,0)];
     
-    [trackPath addCurveToPoint:CGPointMake(50, 50)
-                 controlPoint1:CGPointMake(150, 50 )
-                 controlPoint2:CGPointMake(350, 50)];
+    CGPoint startingPoint = [self getPositionForX:2 outOf:5 andY:2 outOf:5 preventClipping:NO];
+    CGPoint endingPoint = [self getPositionForX:7 outOf:5 andY:1 outOf:5 preventClipping:NO];
+    CGPoint intermediate1 = [self getPositionForX:4 outOf:5 andY:4 outOf:5 preventClipping:NO];
+    CGPoint intermediate2 = [self getPositionForX:3 outOf:5 andY:1 outOf:5 preventClipping:NO];
+    
+    [trackPath moveToPoint:startingPoint];
+    
+    [trackPath addCurveToPoint:endingPoint
+                 controlPoint1:intermediate1
+                 controlPoint2:intermediate2];
     
     CGPathRef cgPath = trackPath.CGPath;
     CGMutablePathRef  pathToDraw = CGPathCreateMutableCopy(cgPath);
