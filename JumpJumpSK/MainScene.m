@@ -117,10 +117,12 @@
 
 - (void) didBeginContact:(SKPhysicsContact *)contact
 {
-    uint32_t collision = FlyCollider;
-    if (collision) {
-        NSLog(@"BOOOMMMM");
+    SKNode *node = contact.bodyA.node;
+    if([node isKindOfClass:[Frog class]]) {
+        NSLog((@"Boom"));
     }
+    
+    
 }
 
 @end

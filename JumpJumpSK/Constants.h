@@ -25,7 +25,8 @@
 typedef enum: uint8_t{
     FrogCollider   = 1,
     FlyCollider    = 2,
-    SnakeCollider  = 4
+    SnakeCollider  = 4,
+    NoCollision     = 8
 }JumpColliderType;
 
 
