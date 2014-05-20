@@ -29,6 +29,8 @@
     self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
     self.physicsBody.categoryBitMask = FrogCollider;
     self.physicsBody.collisionBitMask = FlyCollider;
+    self.physicsBody.usesPreciseCollisionDetection = YES;
+    self.physicsBody.mass = 500;
     
 }
 
