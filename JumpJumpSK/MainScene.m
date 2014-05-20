@@ -26,9 +26,9 @@
 @interface MainScene () <SKPhysicsContactDelegate>
 {}
 @property (nonatomic,strong) Frog *myFrog;
-@property (nonatomic,strong) Fly *myFly;
 @property (nonatomic,strong) RedSnake *redSnake;
 @property (nonatomic,strong) GreenSnake *greenSnake;
+@property (nonatomic, assign) CFTimeInterval timeSinceLastChecked;
 
 @end
 
@@ -50,6 +50,7 @@
         [self createBackground];
         [self createPhysicsWorld];
         [self addAllSprites];
+        //self.timeSinceLastChecked = 0;
     }
     return self;
 }
@@ -65,32 +66,41 @@
 -(void)addAllSprites{
     //frog
     self.myFrog = [Frog getInstance];
-    [myBackground addChild:self.myFrog];
+    [self addChild:self.myFrog];
     [self.myFrog setPositionToXPercent:50 andYPercent:100];
     [self.myFrog lookAround];
     
     //greenSnake
     self.greenSnake = [GreenSnake getInstance];
-    [myBackground addChild:self.greenSnake];
+    [self addChild:self.greenSnake];
     [self.greenSnake setPositionToXPercent:10 andYPercent:80];
     [self.greenSnake bobAndHiss];
     
     //redSnake
     self.redSnake = [RedSnake getInstance];
-    [myBackground addChild:self.redSnake];
+    [self addChild:self.redSnake];
     [self.redSnake setPositionToXPercent:-20 andYPercent:80 preventClipping:NO];
     [self.redSnake slitherBackAndForth];
     
-    //fly
-    self.myFly = [Fly getInstance];
-    [myBackground addChild:self.myFly];
-    [self.myFly flyAcrossScreen];
-    
-    SKShapeNode *myLine = [SKShapeNode node];
-    myLine.path = [self.myFly pathAcrossScreen];
-    [myLine setStrokeColor:[UIColor yellowColor]];
-    [self addChild:myLine];
-    myLine.position = CGPointMake(250,150);
+}
+
+- (void) generateNewFly {
+    NSLog(@"GENERATING FLY");
+    Fly *fly = [Fly getInstance];
+    [self addChild:fly];
+    [fly flyAcrossScreen];
+}
+
+- (int) getCurrentFlyCount {
+    int count = 0;
+    for (id node in [self children]){
+        NSLog(@"CHILD NODE IS: %@", [node class]);
+        if ([node isKindOfClass:[Fly class]]){
+            count++;
+        }
+    }
+    NSLog(@"Current fly count: %d", count);
+    return count;
 }
 
 
@@ -103,8 +113,15 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
-   }
+    //every 2 seconds, check fly count
+    //if (!self.timeSinceLastChecked) self.timeSinceLastChecked = currentTime;
+    if ((currentTime - self.timeSinceLastChecked) > 2){
+        self.timeSinceLastChecked = currentTime;
+        if ([self getCurrentFlyCount] < 10){
+            [self generateNewFly];
+        }
+    }
+}
 
 -(void)frogEatsFly:(Fly *) myFly atPoint:(CGPoint)contactPoint{
         NSString *sparkPath =
