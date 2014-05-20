@@ -18,7 +18,7 @@
 		29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E64899190A03D000ABBAF1 /* AppDelegate.m */; };
 		29E6489D190A03D000ABBAF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E6489B190A03D000ABBAF1 /* Main.storyboard */; };
 		29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E6489F190A03D000ABBAF1 /* ViewController.m */; };
-		29E648A3190A03D000ABBAF1 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E648A2190A03D000ABBAF1 /* MyScene.m */; };
+		29E648A3190A03D000ABBAF1 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E648A2190A03D000ABBAF1 /* MainScene.m */; };
 		29E648A5190A03D000ABBAF1 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 29E648A4190A03D000ABBAF1 /* Spaceship.png */; };
 		29E648A7190A03D000ABBAF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29E648A6190A03D000ABBAF1 /* Images.xcassets */; };
 		29E648AE190A03D000ABBAF1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E648AD190A03D000ABBAF1 /* XCTest.framework */; };
@@ -30,6 +30,7 @@
 		377F5146191C6F95001AFD57 /* Frog.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F5145191C6F95001AFD57 /* Frog.m */; };
 		377F5149191C726A001AFD57 /* RedSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F5148191C726A001AFD57 /* RedSnake.m */; };
 		377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F514E191C75F0001AFD57 /* GreenSnake.m */; };
+		37D9EF0219280AEC00F99071 /* JumpJumpSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D9EF0119280AEC00F99071 /* JumpJumpSpriteNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +61,8 @@
 		29E6489C190A03D000ABBAF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29E6489E190A03D000ABBAF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		29E6489F190A03D000ABBAF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		29E648A1190A03D000ABBAF1 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		29E648A2190A03D000ABBAF1 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		29E648A1190A03D000ABBAF1 /* MainScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		29E648A2190A03D000ABBAF1 /* MainScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScene.m; sourceTree = "<group>"; };
 		29E648A4190A03D000ABBAF1 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		29E648A6190A03D000ABBAF1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		29E648AC190A03D000ABBAF1 /* JumpJumpSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumpJumpSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +78,8 @@
 		377F5148191C726A001AFD57 /* RedSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedSnake.m; sourceTree = "<group>"; };
 		377F514D191C75F0001AFD57 /* GreenSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenSnake.h; sourceTree = "<group>"; };
 		377F514E191C75F0001AFD57 /* GreenSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenSnake.m; sourceTree = "<group>"; };
+		37D9EF0019280AEC00F99071 /* JumpJumpSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpJumpSpriteNode.h; sourceTree = "<group>"; };
+		37D9EF0119280AEC00F99071 /* JumpJumpSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpJumpSpriteNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +148,8 @@
 				29E6489B190A03D000ABBAF1 /* Main.storyboard */,
 				29E6489E190A03D000ABBAF1 /* ViewController.h */,
 				29E6489F190A03D000ABBAF1 /* ViewController.m */,
-				29E648A1190A03D000ABBAF1 /* MyScene.h */,
-				29E648A2190A03D000ABBAF1 /* MyScene.m */,
+				29E648A1190A03D000ABBAF1 /* MainScene.h */,
+				29E648A2190A03D000ABBAF1 /* MainScene.m */,
 				29E648A4190A03D000ABBAF1 /* Spaceship.png */,
 				29E648A6190A03D000ABBAF1 /* Images.xcassets */,
 				29E64890190A03D000ABBAF1 /* Supporting Files */,
@@ -159,6 +162,8 @@
 				377F5148191C726A001AFD57 /* RedSnake.m */,
 				377F514D191C75F0001AFD57 /* GreenSnake.h */,
 				377F514E191C75F0001AFD57 /* GreenSnake.m */,
+				37D9EF0019280AEC00F99071 /* JumpJumpSpriteNode.h */,
+				37D9EF0119280AEC00F99071 /* JumpJumpSpriteNode.m */,
 			);
 			path = JumpJumpSK;
 			sourceTree = "<group>";
@@ -293,11 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				377F5146191C6F95001AFD57 /* Frog.m in Sources */,
-				29E648A3190A03D000ABBAF1 /* MyScene.m in Sources */,
+				29E648A3190A03D000ABBAF1 /* MainScene.m in Sources */,
 				377F5149191C726A001AFD57 /* RedSnake.m in Sources */,
 				297266CE191C79A200615981 /* Fly.m in Sources */,
 				29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */,
 				29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */,
+				37D9EF0219280AEC00F99071 /* JumpJumpSpriteNode.m in Sources */,
 				377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */,
 				29E64896190A03D000ABBAF1 /* main.m in Sources */,
 			);

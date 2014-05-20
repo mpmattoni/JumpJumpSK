@@ -7,11 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "JumpJumpSpriteNode.h"
 
-@interface RedSnake : SKSpriteNode
+@interface RedSnake : JumpJumpSpriteNode
 
 + (RedSnake *) getInstance;
 
-- (void) animate;
+- (void) slitherBackAndForth;
 
 @end

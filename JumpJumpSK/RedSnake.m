@@ -12,18 +12,14 @@
 @implementation RedSnake
 
 + (RedSnake *) getInstance {
-    return [[RedSnake alloc] initWithImageNamed:RED_SNAKE_IMAGE];
+    return [[RedSnake alloc] initWithImageNamed:RED_SNAKE_IMAGE andZPosition:Z_POSITION_REDSNAKE];
 }
 
-- (id) initWithImageNamed:(NSString *)name
-{
-    if (self = [super initWithImageNamed:name]){
-        //do stuff
-    }
-    return self;
+- (void) setupPhysics {
+    //no physics
 }
 
-- (void) animate {
+- (void) slitherBackAndForth {
     //redsnake
     NSArray *redSnakeAnimationFramesRight = @[[SKTexture textureWithImageNamed:@"redsnake-right-1"],
                                      [SKTexture textureWithImageNamed:@"redsnake-right-2"],

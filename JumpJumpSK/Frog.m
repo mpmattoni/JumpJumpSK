@@ -7,26 +7,17 @@
 //
 
 #import "Frog.h"
-#import "Constants.h"
 
 #define FROG_IMAGE @"frog"
 
 @implementation Frog
 
 + (Frog *) getInstance {
-    return [[Frog alloc] initWithImageNamed:FROG_IMAGE];
-}
-
-- (id) initWithImageNamed:(NSString *)name
-{
-    if (self = [super initWithImageNamed:name]){
-        [self setupPhysics];
-    }
-    return self;
+    return [[Frog alloc] initWithImageNamed:FROG_IMAGE andZPosition:Z_POSITION_FROG];
 }
 
 - (void) setupPhysics {
-    self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+    [super setupPhysics];
     self.physicsBody.categoryBitMask = FrogCollider;
     self.physicsBody.collisionBitMask = FlyCollider;
     self.physicsBody.usesPreciseCollisionDetection = YES;

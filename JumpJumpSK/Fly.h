@@ -7,12 +7,13 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "JumpJumpSpriteNode.h"
 
-@interface Fly: SKSpriteNode
+@interface Fly: JumpJumpSpriteNode
 
 + (Fly *) getInstance;
 
 - (void) flyAcrossScreen;
--(CGMutablePathRef)pathAcrossScreen;
+- (CGMutablePathRef) pathAcrossScreen;
 
 @end
