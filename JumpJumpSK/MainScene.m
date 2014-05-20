@@ -67,7 +67,7 @@
     //frog
     self.myFrog = [Frog getInstance];
     [self addChild:self.myFrog];
-    [self.myFrog setPositionToXPercent:50 andYPercent:100];
+    self.myFrog.position = CGPointMake(110,110);
     [self.myFrog lookAround];
     
     //greenSnake
