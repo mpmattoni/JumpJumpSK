@@ -104,6 +104,23 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+   }
+
+-(void)frogEatsFly:(Fly *) myFly atPoint:(CGPoint)contactPoint{
+        NSString *sparkPath =
+    [[NSBundle mainBundle]
+     pathForResource:@"SparkEmitter" ofType:@"sks"];
+    
+    SKEmitterNode *SparkEmitterNode =
+    [NSKeyedUnarchiver unarchiveObjectWithFile:sparkPath];
+    
+    SparkEmitterNode.position = contactPoint;
+    SparkEmitterNode.numParticlesToEmit = 50;
+
+    [myFly removeFromParent];
+    [self addChild:SparkEmitterNode];
+    
+    
 }
 
 /* ------------------------------------------------------------*/
@@ -117,9 +134,14 @@
 
 - (void) didBeginContact:(SKPhysicsContact *)contact
 {
-    SKNode *node = contact.bodyA.node;
-    if([node isKindOfClass:[Frog class]]) {
-        NSLog((@"Boom"));
+    SKNode *nodeA = contact.bodyA.node;
+    if([nodeA isKindOfClass:[Frog class]]) {
+        SKNode *nodeB = contact.bodyB.node;
+        if([nodeB isKindOfClass:[Fly class]]){
+            CGPoint contactPoint = contact.contactPoint;
+            
+            [self frogEatsFly:(Fly*)nodeB atPoint:contactPoint];
+        }
     }
     
     
