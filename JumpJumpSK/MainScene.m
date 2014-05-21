@@ -50,7 +50,6 @@
         [self createBackground];
         [self createPhysicsWorld];
         [self addAllSprites];
-        //self.timeSinceLastChecked = 0;
     }
     return self;
 }
@@ -67,7 +66,10 @@
     //frog
     self.myFrog = [Frog getInstance];
     [self addChild:self.myFrog];
-    self.myFrog.position = CGPointMake(110,110);
+    //TODO: Now that sprites are being added to the scene directly (and not the background)
+    //We need to rewrite the JJSpriteNode position methods
+    //This change was for properly identifying children
+    self.myFrog.position = CGPointMake(200,200);
     [self.myFrog lookAround];
     
     //greenSnake
@@ -81,7 +83,6 @@
     [self addChild:self.redSnake];
     [self.redSnake setPositionToXPercent:-20 andYPercent:80 preventClipping:NO];
     [self.redSnake slitherBackAndForth];
-    
 }
 
 - (void) generateNewFly {
@@ -94,12 +95,12 @@
 - (int) getCurrentFlyCount {
     int count = 0;
     for (id node in [self children]){
-        NSLog(@"CHILD NODE IS: %@", [node class]);
+        //NSLog(@"CHILD NODE IS: %@", [node class]);
         if ([node isKindOfClass:[Fly class]]){
             count++;
         }
     }
-    NSLog(@"Current fly count: %d", count);
+    //NSLog(@"Current fly count: %d", count);
     return count;
 }
 
