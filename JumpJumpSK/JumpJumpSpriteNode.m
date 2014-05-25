@@ -19,7 +19,6 @@
     return self;
 }
 
-
 - (void) setPositionToX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal preventClipping:(BOOL)preventClipping {
     self.position = [self getPositionForX:x outOf:xTotal andY:y outOf:yTotal preventClipping:preventClipping];
 }
@@ -38,7 +37,9 @@
 
 
 - (void) setupPhysics {
-   self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.height/2];
+#if PHYSICS
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+#endif
 }
 
 - (CGPoint) getPositionForX:(int)x outOf:(int)xTotal andY:(int)y outOf:(int)yTotal preventClipping:(BOOL)preventClipping {

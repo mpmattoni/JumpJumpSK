@@ -18,12 +18,14 @@
 }
 
 - (void) setupPhysics {
+#if PHYSICS
    [super setupPhysics];
    self.physicsBody.affectedByGravity = NO;
    //self.physicsBody.dynamic = NO;
     self.physicsBody.collisionBitMask = NoCollision;
     self.physicsBody.categoryBitMask = FlyCollider;
 //    self.physicsBody.contactTestBitMask = FrogCollider;
+#endif
 }
 
 - (void) flyAcrossScreen {

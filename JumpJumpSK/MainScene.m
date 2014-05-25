@@ -67,7 +67,7 @@
     //frog
     self.myFrog = [Frog getInstance];
     [self addChild:self.myFrog];
-    self.myFrog.position = CGPointMake(110,110);
+    self.myFrog.position = CGPointMake(150,150);
     [self.myFrog lookAround];
     
     //greenSnake
@@ -136,17 +136,17 @@
 
     [myFly removeFromParent];
     [self addChild:SparkEmitterNode];
-    
-    
 }
 
 /* ------------------------------------------------------------*/
 #pragma mark - Physics
 /* ------------------------------------------------------------*/
 -(void)createPhysicsWorld{
+#if PHYSICS
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
     self.physicsWorld.gravity = CGVectorMake(0, -9.8);
     self.physicsWorld.contactDelegate = self;
+#endif
 }
 
 - (void) didBeginContact:(SKPhysicsContact *)contact

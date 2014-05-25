@@ -15,6 +15,10 @@
     return [[GreenSnake alloc] initWithImageNamed:GREEN_SNAKE_IMAGE andZPosition:Z_POSITION_GREENSNAKE];
 }
 
+- (void) setupPhysics {
+    //no physics
+}
+
 - (void) bobAndHiss {
     
     //snake
