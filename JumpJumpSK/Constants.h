@@ -10,7 +10,7 @@
 #define JumpJumpSK_Constants_h
 
 //higher number = on top
-#define Z_POSITION_FLY 100
+#define Z_POSITION_FLY 190
 #define Z_POSITION_FROG 90
 #define Z_POSITION_GREENSNAKE 50
 #define Z_POSITION_REDSNAKE 30

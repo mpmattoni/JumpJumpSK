@@ -21,8 +21,6 @@
     [super setupPhysics];
     self.physicsBody.categoryBitMask = FrogCollider;
     self.physicsBody.collisionBitMask = NoCollision;
-    //self.physicsBody.usesPreciseCollisionDetection = YES;
-    //self.physicsBody.mass = 500;
     self.physicsBody.contactTestBitMask = FlyCollider;
 #endif
 }
