@@ -55,6 +55,9 @@
     return self;
 }
 
+//TODO: Add Score
+//TODO: Add Timer
+
 -(void)createBackground{
     myBackground = [SKSpriteNode spriteNodeWithImageNamed:@"jungle_background_640x960"];
     myBackground.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));

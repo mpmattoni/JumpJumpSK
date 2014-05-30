@@ -31,6 +31,7 @@
 }
 
 - (void) jump {
+    //TODO:  Change the frog's physics body as he animates so that he collides correctly
    [self removeAllActions];
     [self runAction:[self getJumpUpAction] completion:^{
         [self lookAround];

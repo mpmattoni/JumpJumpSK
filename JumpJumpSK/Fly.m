@@ -13,6 +13,7 @@
 
 @implementation Fly
 
+//TODO: Make Flies more random (some fast, different pattern)
 + (Fly *) getInstance {
     return [[Fly alloc] initWithImageNamed:FLY_IMAGE andZPosition:Z_POSITION_FLY];
 }
