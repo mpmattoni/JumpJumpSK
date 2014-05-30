@@ -67,19 +67,19 @@
     //frog
     self.myFrog = [Frog getInstance];
     [self addChild:self.myFrog];
-    self.myFrog.position = CGPointMake(150,150);
+    [self.myFrog setPositionToXPercent:50 andYPercent:10];
     [self.myFrog lookAround];
     
     //greenSnake
     self.greenSnake = [GreenSnake getInstance];
     [self addChild:self.greenSnake];
-    [self.greenSnake setPositionToXPercent:10 andYPercent:80];
+    [self.greenSnake setPositionToXPercent:0 andYPercent:0];
     [self.greenSnake bobAndHiss];
     
     //redSnake
     self.redSnake = [RedSnake getInstance];
     [self addChild:self.redSnake];
-    [self.redSnake setPositionToXPercent:-20 andYPercent:80 preventClipping:NO];
+    [self.redSnake setPositionToXPercent:-20 andYPercent:15 preventClipping:NO];
     [self.redSnake slitherBackAndForth];
     
 }
