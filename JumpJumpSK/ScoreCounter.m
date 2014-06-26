@@ -13,14 +13,18 @@
 int score = 0;
 
 + (ScoreCounter *) getInstance {
-    return [[ScoreCounter alloc] initWithFontNamed:@"ARIAL"];
+    return [[ScoreCounter alloc] initWithFontNamed:@"ARIAL BLACK"];
 }
 
 - (void) incrementScoreBy:(int)intScoreToAdd  {
     
     score = score + intScoreToAdd;
-    self.text = [NSString stringWithFormat:@"%d",score];
-    
+    NSString *formattedScore = [NSString stringWithFormat:@"%d",score];
+    if(formattedScore.length < 3){
+        formattedScore = [NSString stringWithFormat:@"0%@", formattedScore];
+    }
+
+    self.text = formattedScore;
 }
 
 

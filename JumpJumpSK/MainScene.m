@@ -13,6 +13,7 @@
 #import "Fly.h"
 #import "Constants.h"
 #import "ScoreCounter.h"
+#import "LevelCounter.h"
 
 #define Z_ORDER_FOREGROUND 100
 #define Z_ORDER_BACKGROUND -100
@@ -31,6 +32,9 @@
 @property (nonatomic,strong) GreenSnake *greenSnake;
 @property (nonatomic, assign) CFTimeInterval timeSinceLastChecked;
 @property (nonatomic, strong) ScoreCounter *myScoreCounter;
+@property (nonatomic, strong) ScoreCounter *myScoreLabel;
+@property (nonatomic, strong) LevelCounter *myLevelCounter;
+@property (nonatomic, strong) LevelCounter *myLevelLabel;
 
 @end
 
@@ -87,11 +91,38 @@
     [self.redSnake setPositionToXPercent:-20 andYPercent:15 preventClipping:NO];
     [self.redSnake slitherBackAndForth];
     
-    //score
+    //score label
+    self.myScoreLabel = [ScoreCounter getInstance];
+    [self addChild:self.myScoreLabel];
+    [self.myScoreLabel setPosition: CGPointMake(CGRectGetMinX(self.frame) + 50, CGRectGetMidY(self.frame)+125)];
+    self.myScoreLabel.text = @"score";
+    self.myScoreLabel.fontSize = 24;
+    self.myScoreLabel.zPosition = Z_POSITION_LABELS;
+    
+    //score counter
     self.myScoreCounter = [ScoreCounter getInstance];
     [self addChild:self.myScoreCounter];
-    [self.myScoreCounter setPosition: CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+100)];
+    [self.myScoreCounter setPosition: CGPointMake(CGRectGetMinX(self.frame) + 50, CGRectGetMidY(self.frame)+100)];
     self.myScoreCounter.text = @"00";
+    self.myScoreCounter.fontSize = 24;
+    self.myScoreCounter.zPosition = Z_POSITION_LABELS;
+    
+    //level label
+    self.myLevelLabel = [LevelCounter getInstance];
+    [self addChild:self.myLevelLabel];
+    [self.myLevelLabel setPosition: CGPointMake(CGRectGetMaxX(self.frame) - 50, CGRectGetMaxY(self.frame)-40)];
+    self.myLevelLabel.text = @"level";
+    self.myLevelLabel.fontSize = 24;
+    self.myLevelLabel.zPosition = Z_POSITION_LABELS;
+    
+    //level counter
+    self.myLevelCounter = [LevelCounter getInstance];
+    [self addChild:self.myLevelCounter];
+    [self.myLevelCounter setPosition: CGPointMake(CGRectGetMaxX(self.frame) -50, CGRectGetMaxY(self.frame)-65)];
+    self.myLevelCounter.text = @"1";
+    self.myLevelCounter.fontSize = 24;
+    self.myLevelCounter.zPosition = Z_POSITION_LABELS;
+    
      
 }
 

@@ -11,6 +11,7 @@
 		297266CE191C79A200615981 /* Fly.m in Sources */ = {isa = PBXBuildFile; fileRef = 297266CD191C79A200615981 /* Fly.m */; };
 		29A1D330192AF45900A9F216 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 29A1D32E192AF45900A9F216 /* SparkEmitter.sks */; };
 		29A1D331192AF45900A9F216 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 29A1D32F192AF45900A9F216 /* spark.png */; };
+		29BFE4D0195BCD2E0005311C /* LevelCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BFE4CF195BCD2E0005311C /* LevelCounter.m */; };
 		29E2040D195A64AD00A1F2F9 /* ScoreCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E2040C195A64AD00A1F2F9 /* ScoreCounter.m */; };
 		29E64888190A03D000ABBAF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64887190A03D000ABBAF1 /* Foundation.framework */; };
 		29E6488A190A03D000ABBAF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E64889190A03D000ABBAF1 /* CoreGraphics.framework */; };
@@ -53,6 +54,8 @@
 		297266CD191C79A200615981 /* Fly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fly.m; sourceTree = "<group>"; };
 		29A1D32E192AF45900A9F216 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
 		29A1D32F192AF45900A9F216 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		29BFE4CE195BCD2E0005311C /* LevelCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCounter.h; sourceTree = "<group>"; };
+		29BFE4CF195BCD2E0005311C /* LevelCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelCounter.m; sourceTree = "<group>"; };
 		29E2040B195A64AD00A1F2F9 /* ScoreCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCounter.h; sourceTree = "<group>"; };
 		29E2040C195A64AD00A1F2F9 /* ScoreCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCounter.m; sourceTree = "<group>"; };
 		29E64884190A03D000ABBAF1 /* JumpJumpSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumpJumpSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +181,8 @@
 				377F514E191C75F0001AFD57 /* GreenSnake.m */,
 				37D9EF0019280AEC00F99071 /* JumpJumpSpriteNode.h */,
 				37D9EF0119280AEC00F99071 /* JumpJumpSpriteNode.m */,
+				29BFE4CE195BCD2E0005311C /* LevelCounter.h */,
+				29BFE4CF195BCD2E0005311C /* LevelCounter.m */,
 				29E2040B195A64AD00A1F2F9 /* ScoreCounter.h */,
 				29E2040C195A64AD00A1F2F9 /* ScoreCounter.m */,
 			);
@@ -324,6 +329,7 @@
 				29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */,
 				29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */,
 				37D9EF0219280AEC00F99071 /* JumpJumpSpriteNode.m in Sources */,
+				29BFE4D0195BCD2E0005311C /* LevelCounter.m in Sources */,
 				377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */,
 				29E64896190A03D000ABBAF1 /* main.m in Sources */,
 			);

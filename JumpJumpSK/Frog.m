@@ -46,7 +46,7 @@
 - (SKAction *) getJumpUpAction {
     NSArray *frogAnimation = @[[SKTexture textureWithImageNamed:@"frog-model"], [SKTexture textureWithImageNamed:@"frog-model2"]];
     SKAction *frogAction = [SKAction animateWithTextures:frogAnimation timePerFrame:0.1];
-    SKAction *frogMoveUp = [SKAction moveByX:0 y:300 duration:0.5];
+    SKAction *frogMoveUp = [SKAction moveByX:0 y:600 duration:0.75];
     return [SKAction group:@[frogAction, frogMoveUp]];
 }
 
