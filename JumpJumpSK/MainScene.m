@@ -12,6 +12,7 @@
 #import "GreenSnake.h"
 #import "Fly.h"
 #import "Constants.h"
+#import "ScoreCounter.h"
 
 #define Z_ORDER_FOREGROUND 100
 #define Z_ORDER_BACKGROUND -100
@@ -29,6 +30,7 @@
 @property (nonatomic,strong) RedSnake *redSnake;
 @property (nonatomic,strong) GreenSnake *greenSnake;
 @property (nonatomic, assign) CFTimeInterval timeSinceLastChecked;
+@property (nonatomic, strong) ScoreCounter *myScoreCounter;
 
 @end
 
@@ -55,7 +57,7 @@
     return self;
 }
 
-//TODO: Add Score
+
 //TODO: Add Timer
 
 -(void)createBackground{
@@ -85,6 +87,12 @@
     [self.redSnake setPositionToXPercent:-20 andYPercent:15 preventClipping:NO];
     [self.redSnake slitherBackAndForth];
     
+    //score
+    self.myScoreCounter = [ScoreCounter getInstance];
+    [self addChild:self.myScoreCounter];
+    [self.myScoreCounter setPosition: CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+100)];
+    self.myScoreCounter.text = @"00";
+     
 }
 
 - (void) generateNewFly {
@@ -135,6 +143,8 @@
     
     SparkEmitterNode.position = contactPoint;
     SparkEmitterNode.numParticlesToEmit = 50;
+    
+    [self.myScoreCounter incrementScoreBy:1];
 
     [myFly removeFromParent];
     [self addChild:SparkEmitterNode];
