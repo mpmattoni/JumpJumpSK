@@ -97,7 +97,6 @@
 - (int) getCurrentFlyCount {
     int count = 0;
     for (id node in [self children]){
-        NSLog(@"CHILD NODE IS: %@", [node class]);
         if ([node isKindOfClass:[Fly class]]){
             count++;
         }

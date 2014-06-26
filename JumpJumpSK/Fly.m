@@ -8,6 +8,7 @@
 //
 
 #import "Fly.h"
+#import "Utils.h"
 #include <stdlib.h>
 
 #define FLY_IMAGE @"fly"
@@ -39,20 +40,46 @@
 -(CGMutablePathRef) pathAcrossScreen {
     UIBezierPath *trackPath = [UIBezierPath bezierPath];
     
-    [trackPath moveToPoint:[self randomPointOnScreen]];
+    [trackPath moveToPoint:[self getStartingPosition]];
     
-    [trackPath addCurveToPoint:[self randomPointOnScreen]
-                 controlPoint1:[self randomPointOnScreen]
-                 controlPoint2:[self randomPointOnScreen]];
+    [trackPath addCurveToPoint:[self getEndingPosition]
+                 controlPoint1:[self getControlPoint1]
+                 controlPoint2:[self getControlPoint2]];
     
     CGPathRef cgPath = trackPath.CGPath;
-    CGMutablePathRef  pathToDraw = CGPathCreateMutableCopy(cgPath);
+    CGMutablePathRef pathToDraw = CGPathCreateMutableCopy(cgPath);
     return pathToDraw;
 }
 
-//creates a random point on screen with an X and Y of up to 120% of screen size (thus, the point can be outside viewable bounds)
-- (CGPoint) randomPointOnScreen {
-   return [self getPositionForXPercent:arc4random() % 120 andYPercent:arc4random() % 120 preventClipping:NO];
+//starting position is off the left side of the screen, between 30%-120% screen height
+- (CGPoint) getStartingPosition {
+    int x = -20;
+    int y = [Utils generateRandomNumberBetween:30 and:120];
+    NSLog(@"Random is x: %d and y: %d", x, y);
+    CGPoint point = [self getPositionForXPercent:x andYPercent:y];
+    NSLog(@"point is x: %f and y: %f", point.x, point.y);
+    return point;
+}
+
+//end position is off the right side of the screen, between 30%-120% screen height
+- (CGPoint) getEndingPosition {
+    int x = 120;
+    int y = [Utils generateRandomNumberBetween:30 and:120];
+    return [self getPositionForXPercent:x andYPercent:y];
+}
+
+//middle1 position is between 20%-50% along x axis, and 20%-90% screen height
+- (CGPoint) getControlPoint1 {
+    int x = [Utils generateRandomNumberBetween:20 and:50];
+    int y = [Utils generateRandomNumberBetween:20 and:90];
+    return [self getPositionForXPercent:x andYPercent:y];
+}
+
+//middle2 position is between 50%-90% along x axis, and 20%-90% screen height
+- (CGPoint) getControlPoint2 {
+    int x = [Utils generateRandomNumberBetween:50 and:90];
+    int y = [Utils generateRandomNumberBetween:20 and:90];
+    return [self getPositionForXPercent:x andYPercent:y];
 }
 
 @end

@@ -29,6 +29,7 @@
 		29E648B8190A03D000ABBAF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E648B6190A03D000ABBAF1 /* InfoPlist.strings */; };
 		29E648BA190A03D000ABBAF1 /* JumpJumpSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */; };
 		29F7043A190A05CD009EEE16 /* Jumpy Frog Art.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 29F70439190A05CD009EEE16 /* Jumpy Frog Art.atlas */; };
+		3752E32F195B9BB2006989C0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3752E32E195B9BB2006989C0 /* Utils.m */; };
 		377F5146191C6F95001AFD57 /* Frog.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F5145191C6F95001AFD57 /* Frog.m */; };
 		377F5149191C726A001AFD57 /* RedSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F5148191C726A001AFD57 /* RedSnake.m */; };
 		377F514F191C75F0001AFD57 /* GreenSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 377F514E191C75F0001AFD57 /* GreenSnake.m */; };
@@ -76,6 +77,8 @@
 		29E648B9190A03D000ABBAF1 /* JumpJumpSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpJumpSKTests.m; sourceTree = "<group>"; };
 		29F70439190A05CD009EEE16 /* Jumpy Frog Art.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "Jumpy Frog Art.atlas"; sourceTree = "<group>"; };
 		3736A3DC1923195400F33546 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3752E32D195B9BB2006989C0 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		3752E32E195B9BB2006989C0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		377F5144191C6F95001AFD57 /* Frog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frog.h; sourceTree = "<group>"; };
 		377F5145191C6F95001AFD57 /* Frog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frog.m; sourceTree = "<group>"; };
 		377F5147191C726A001AFD57 /* RedSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedSnake.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				377F514E191C75F0001AFD57 /* GreenSnake.m */,
 				37D9EF0019280AEC00F99071 /* JumpJumpSpriteNode.h */,
 				37D9EF0119280AEC00F99071 /* JumpJumpSpriteNode.m */,
+				3752E32D195B9BB2006989C0 /* Utils.h */,
+				3752E32E195B9BB2006989C0 /* Utils.m */,
 			);
 			path = JumpJumpSK;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				377F5146191C6F95001AFD57 /* Frog.m in Sources */,
 				29E648A3190A03D000ABBAF1 /* MainScene.m in Sources */,
 				377F5149191C726A001AFD57 /* RedSnake.m in Sources */,
+				3752E32F195B9BB2006989C0 /* Utils.m in Sources */,
 				297266CE191C79A200615981 /* Fly.m in Sources */,
 				29E648A0190A03D000ABBAF1 /* ViewController.m in Sources */,
 				29E6489A190A03D000ABBAF1 /* AppDelegate.m in Sources */,
