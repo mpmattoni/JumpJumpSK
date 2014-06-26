@@ -32,7 +32,7 @@
 }
 
 - (void) flyAcrossScreen {
-    SKAction *followPathAcrossScreen = [SKAction followPath:[self pathAcrossScreen] asOffset:NO orientToPath:NO duration:10.0];
+    SKAction *followPathAcrossScreen = [SKAction followPath:[self pathAcrossScreen] asOffset:NO orientToPath:NO duration:[self getFlightTime]];
     [self runAction:[SKAction repeatActionForever:followPathAcrossScreen]];
 }
 
@@ -80,6 +80,11 @@
     int x = [Utils generateRandomNumberBetween:50 and:90];
     int y = [Utils generateRandomNumberBetween:20 and:90];
     return [self getPositionForXPercent:x andYPercent:y];
+}
+
+//total flight time across the screen; short flight time means the fly is moving faster. Returns time between 6.0 and 12.0
+- (float) getFlightTime {
+    return (float)[Utils generateRandomNumberBetween:60 and:120]/10.0;
 }
 
 @end
