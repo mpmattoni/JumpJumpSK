@@ -10,7 +10,7 @@
 
 @interface LevelCounter : SKLabelNode
 
+
 + (LevelCounter *) getInstance;
 - (void) incrementLevelBy:(int)intLevelToAdd;
-
 @end
