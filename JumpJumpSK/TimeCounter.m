@@ -44,6 +44,8 @@ NSTimer *timer;
     if(seconds > 0 ){
         seconds -- ;
         self.text = [NSString stringWithFormat:@"%d", seconds];
+    }else{
+        blRunning = false;
     }
     
 }
@@ -53,6 +55,10 @@ NSTimer *timer;
     blRunning = true;
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
     
+}
+
+- (int) getSecondsRemaining{
+    return seconds;
 }
 
 @end

@@ -169,7 +169,9 @@
 -(void)update:(CFTimeInterval)currentTime {
     //every 2 seconds, check fly count
     
-    if ((currentTime - self.timeSinceLastChecked) > 2){
+    if(self.myTimerLabel.getSecondsRemaining ==0){
+        NSLog(@"End level now");
+    }else if ((currentTime - self.timeSinceLastChecked) > 2){
         self.timeSinceLastChecked = currentTime;
         if ([self getCurrentFlyCount] < 10){
             [self generateNewFly];

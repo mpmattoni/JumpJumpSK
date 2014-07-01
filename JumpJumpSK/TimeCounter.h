@@ -14,5 +14,6 @@
 - (void) initializeTimerwithSeconds: (int)intSeconds;
 - (void) stopTimer;
 - (void) startTimer;
+- (int) getSecondsRemaining;
 
 @end
