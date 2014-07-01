@@ -14,6 +14,7 @@
 #import "Constants.h"
 #import "ScoreCounter.h"
 #import "LevelCounter.h"
+#import "TimeCounter.h"
 
 #define Z_ORDER_FOREGROUND 100
 #define Z_ORDER_BACKGROUND -100
@@ -35,6 +36,8 @@
 @property (nonatomic, strong) ScoreCounter *myScoreLabel;
 @property (nonatomic, strong) LevelCounter *myLevelCounter;
 @property (nonatomic, strong) LevelCounter *myLevelLabel;
+@property (nonatomic, strong) TimeCounter *myTimerLabel;
+
 
 @end
 
@@ -122,7 +125,17 @@
     self.myLevelCounter.fontSize = 24;
     self.myLevelCounter.zPosition = Z_POSITION_LABELS;
     
-     
+    //timer
+    self.myTimerLabel = [TimeCounter getInstance];
+    [self addChild:self.myTimerLabel];
+    [self.myTimerLabel setPosition: CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)+100)];
+    self.myTimerLabel.text = @"30";
+    self.myTimerLabel.fontColor = [UIColor greenColor];
+    self.myTimerLabel.fontSize = 36;
+    self.myTimerLabel.zPosition = Z_POSITION_LABELS;
+    [self.myTimerLabel initializeTimerwithSeconds:30];
+    [self.myTimerLabel startTimer];
+    
 }
 
 - (void) generateNewFly {
@@ -155,7 +168,7 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     //every 2 seconds, check fly count
-    //if (!self.timeSinceLastChecked) self.timeSinceLastChecked = currentTime;
+    
     if ((currentTime - self.timeSinceLastChecked) > 2){
         self.timeSinceLastChecked = currentTime;
         if ([self getCurrentFlyCount] < 10){

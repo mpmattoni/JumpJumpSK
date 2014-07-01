@@ -13,6 +13,6 @@
 + (TimeCounter *) getInstance;
 - (void) initializeTimerwithSeconds: (int)intSeconds;
 - (void) stopTimer;
-- (void) tick;
+- (void) startTimer;
 
 @end

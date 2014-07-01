@@ -19,6 +19,7 @@
 
 int seconds = 0;
 bool blRunning = false;
+NSTimer *timer;
 
 
 + (TimeCounter *) getInstance{
@@ -28,22 +29,30 @@ bool blRunning = false;
 - (void) initializeTimerwithSeconds:(int)intSeconds{
     //sets timer value to initial value
     seconds = intSeconds;
+    self.text = [NSString stringWithFormat:@"%d", seconds];
     
 }
 
 - (void) stopTimer{
     //stops timer
     blRunning = false;
+    [timer invalidate];
     
 }
 
-- (void) tick{
-    //updates timer display with current remaining time
-    if(blRunning) {
-        //set text here
+- (void)updateCounter:(NSTimer *)theTimer {
+    if(seconds > 0 ){
+        seconds -- ;
+        self.text = [NSString stringWithFormat:@"%d", seconds];
     }
     
 }
 
+- (void) startTimer{
+    //stops timer
+    blRunning = true;
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(updateCounter:) userInfo:nil repeats:YES];
+    
+}
 
 @end
