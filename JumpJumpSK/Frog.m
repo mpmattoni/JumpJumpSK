@@ -12,6 +12,8 @@
 
 @implementation Frog
 
+    bool blJumping;
+
 + (Frog *) getInstance {
     return [[Frog alloc] initWithImageNamed:FROG_IMAGE andZPosition:Z_POSITION_FROG];
 }
@@ -32,10 +34,14 @@
 
 - (void) jump {
     //TODO:  Change the frog's physics body as he animates so that he collides correctly
-   [self removeAllActions];
-    [self runAction:[self getJumpUpAction] completion:^{
-        [self lookAround];
-    }];
+    if(!blJumping){
+        blJumping = true;
+        [self removeAllActions];
+        [self runAction:[self getJumpUpAction] completion:^{
+            blJumping = false;
+            [self lookAround];
+        }];
+    }
 }
 
 - (SKAction *) getLookAroundAction {

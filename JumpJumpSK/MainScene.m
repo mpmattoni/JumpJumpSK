@@ -56,7 +56,6 @@
         [self createBackground];
         [self createPhysicsWorld];
         [self addAllSprites];
-        //self.timeSinceLastChecked = 0;
     }
     return self;
 }
@@ -110,7 +109,7 @@
     //level label
     self.myLevelLabel = [LevelCounter getInstance];
     [self addChild:self.myLevelLabel];
-    [self.myLevelLabel setPosition: CGPointMake(CGRectGetMaxX(self.frame) - 50, CGRectGetMaxY(self.frame)-40)];
+    [self.myLevelLabel setPosition: CGPointMake(CGRectGetMaxX(self.frame) - 50, CGRectGetMaxY(self.frame)-35)];
     self.myLevelLabel.text = @"level";
     self.myLevelLabel.fontSize = 24;
     self.myLevelLabel.zPosition = Z_POSITION_LABELS;
@@ -118,7 +117,7 @@
     //level counter
     self.myLevelCounter = [LevelCounter getInstance];
     [self addChild:self.myLevelCounter];
-    [self.myLevelCounter setPosition: CGPointMake(CGRectGetMaxX(self.frame) -50, CGRectGetMaxY(self.frame)-65)];
+    [self.myLevelCounter setPosition: CGPointMake(CGRectGetMaxX(self.frame) -50, CGRectGetMaxY(self.frame)-60)];
     self.myLevelCounter.text = @"1";
     self.myLevelCounter.fontSize = 24;
     self.myLevelCounter.zPosition = Z_POSITION_LABELS;
@@ -150,7 +149,8 @@
 /* ------------------------------------------------------------*/
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    [self.myFrog jump];
+        [self.myFrog jump];
+    
 }
 
 -(void)update:(CFTimeInterval)currentTime {
